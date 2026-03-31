@@ -1,0 +1,185 @@
+/* Profile.css */
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #c49b63;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.user-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-avatar {
+    font-size: 6rem;
+    color: #c49b63;
+    margin-bottom: 15px;
+}
+
+.user-avatar i {
+    line-height: 1;
+}
+
+.user-name {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: #fff3e0;
+    transform: translateX(5px);
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #c49b63;
+    min-width: 40px;
+    text-align: center;
+}
+
+.info-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.info-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-title {
+        font-size: 2rem;
+    }
+
+    .user-card {
+        padding: 30px;
+    }
+
+    .user-avatar {
+        font-size: 5rem;
+    }
+
+    .user-name {
+        font-size: 1.8rem;
+    }
+    
+    .info-item {
+        padding: 12px 15px;
+    }
+    
+    .info-item i {
+        font-size: 1.8rem;
+    }
+    
+    .info-value {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-title {
+        font-size: 1.8rem;
+    }
+
+    .user-card {
+        padding: 20px;
+    }
+
+    .user-avatar {
+        font-size: 4rem;
+    }
+
+    .user-name {
+        font-size: 1.5rem;
+    }
+
+    .info-item {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .info-item i {
+        font-size: 1.5rem;
+        min-width: 30px;
+    }
+
+    .info-label {
+        font-size: 0.8rem;
+    }
+
+    .info-value {
+        font-size: 1rem;
+    }
+}

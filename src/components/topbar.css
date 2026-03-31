@@ -1,0 +1,107 @@
+.topbar {
+    background-color: #2c3e50;  /* Dark blue-gray that matches the theme */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;  /* Slightly below navbar (9999) but above content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #c49b63;  /* Gold border to match theme */
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: #ffffff;  /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 30px;
+    padding: 10px 25px;
+    background-color: #c49b63;  /* Gold color matching your theme */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+    background-color: #b3894a;  /* Darker gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(196, 155, 99, 0.4);
+}
+
+.logout-btn i {
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topbar {
+        height: 80px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .logout-btn {
+        margin-right: 20px;
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logout-btn {
+        margin-right: 15px;
+        padding: 6px 15px;
+        font-size: 13px;
+    }
+
+    .logout-btn i {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,173 @@
+/* register.css - Make all selectors more specific */
+.register-page .container {
+    background-image: url('/Images/Login.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    min-height: 680px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.register-page input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.276);
+    font-size: 14px;
+}
+
+.register-page input:focus {
+    outline: 2px solid #c49b63;
+    outline-offset: 2px;
+}
+
+.register-page .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 275px;
+}
+
+.register-page .register-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 280px;
+}
+
+.register-page button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.register-page .btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.register-page .btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.register-page .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.register-page .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.register-page h2 {
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.802);
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-page h1 {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 2px 4px rgb(0, 0, 0);
+    font-family: "Nunito", sans-serif;
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.register-page .w-100 {
+    width: 100%;
+}
+
+.register-page .mt-2 {
+    margin-top: 10px;
+}
+
+.register-page .text-center {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-page .container {
+        width: 90%;
+        max-width: 400px;
+        margin: 50px auto;
+        min-height: 600px;
+    }
+
+    .register-page h1 {
+        font-size: 2rem;
+        top: 100px;
+    }
+
+    .register-page .login-form {
+        margin-top: 220px;
+    }
+
+    .register-page .register-form {
+        margin-top: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-page .container {
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .register-page h1 {
+        font-size: 1.8rem;
+        top: 80px;
+    }
+
+    .register-page .login-form {
+        margin-top: 200px;
+    }
+
+    .register-page .register-form {
+        margin-top: 200px;
+    }
+
+    .register-page input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .register-page button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Animation for error message */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-page .error-message {
+    animation: slideIn 0.3s ease;
+}
