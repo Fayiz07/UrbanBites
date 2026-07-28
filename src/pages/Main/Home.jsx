@@ -23,7 +23,7 @@ const Home = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('/data/restaurantData.json');
+        const response = await fetch(`${import.meta.env.BASE_URL}data/restaurantData.json`);
         const data = await response.json();
         setRestaurantData(data);
         setLoading(false);

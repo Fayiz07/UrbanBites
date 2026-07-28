@@ -13,7 +13,7 @@ function TopBar() {
     return (
         <div className="topbar">
             <div className="logo">
-                <img src="/Images/Logo.png" alt="Urban Bites Logo" />
+                <img src={`${import.meta.env.BASE_URL}Images/Logo.png`} alt="Urban Bites Logo" />
                 <h1>Urban Bites</h1>
             </div>
             <div>
