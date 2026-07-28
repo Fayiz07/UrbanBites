@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout';
 import './Home.css';
 
@@ -8,6 +9,7 @@ const Home = () => {
   const [cart, setCart] = useState([]);
   const [showCartMessage, setShowCartMessage] = useState(false);
   const [addedItem, setAddedItem] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedCart = localStorage.getItem('cart');
@@ -17,7 +19,7 @@ const Home = () => {
 
     const currentUser = localStorage.getItem('currentUser');
     if (!currentUser) {
-      window.location.href = '/';
+      navigate('/');
       return;
     }
 
@@ -189,7 +191,7 @@ const Home = () => {
             </div>
 
             <div className="viewAllContainer">
-              <button className="viewAllBtn" onClick={() => window.location.href = '/menu'}>
+              <button className="viewAllBtn" onClick={() => navigate('/menu')}>
                 View Full Menu
               </button>
             </div>

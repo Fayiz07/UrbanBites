@@ -53,7 +53,7 @@ function Register() {
                 localStorage.setItem("currentUser", JSON.stringify(foundUser));
                 alert("Login successful!");
                 resetForm();
-                navigate("/Home");
+                navigate("/home");
             } else {
                 setError("Invalid email or password.");
             }
@@ -76,7 +76,7 @@ function Register() {
             
             alert("Registration successful!");
             resetForm();
-            navigate("/Home");
+            navigate("/home");
         }
     };
 
